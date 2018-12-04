@@ -1,0 +1,93 @@
+body {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#header {
+  position: r;
+  background-image: url("../img/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 750px;
+}
+
+#header .navigation {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+1,000000+9&0.8+0,0+98 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), color-stop(1%, rgba(0, 0, 0, 0.79)), color-stop(9%, rgba(0, 0, 0, 0.72)), color-stop(98%, rgba(0, 0, 0, 0)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.79) 1%, rgba(0, 0, 0, 0.72) 9%, rgba(0, 0, 0, 0) 98%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=0 );
+  /* IE6-9 */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#header .navigation .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  margin: 0;
+}
+
+#header .navigation .nav .nav-item, #header .navigation .nav .icon {
+  padding: 20px 20px 0px 20px;
+}
+
+#header .navigation .nav .nav-item a, #header .navigation .nav .icon a {
+  color: #fff;
+  font-family: "Gentium Book Basic", serif;
+  text-decoration: none;
+}
+
+#header .navigation .nav .nav-item:hover {
+  border-top: 2px solid #fff;
+}
+
+#header .navigation .nav .icon a {
+  color: #dab33e;
+}
+
+#header .contain {
+  text-align: center;
+}
+
+#header .contain p {
+  margin: 0 auto;
+  font-size: 80pt;
+  color: #fff;
+  font-weight: 300;
+  width: 52%;
+}
+
+#header .contain .buttons .blackbtn {
+  color: #fff;
+  border: #000;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px 20px 40px;
+  outline: none;
+}
+
+#header .contain .buttons .whitebtn {
+  color: #fff;
+  border: 0px #fff solid;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px 40px 20px 40px;
+  outline: none;
+}
+/*# sourceMappingURL=style.css.map */
