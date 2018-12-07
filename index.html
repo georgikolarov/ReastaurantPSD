@@ -11,20 +11,40 @@
 </head>
 <body>
     <section id="header">
-        <div class="navigation">
-            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
-            <ul class="nav">
-                <li class="nav-item active"><a href="#">Home</a></li>
-                <li class="nav-item"><a href="#">About</a></li>
-                <li class="nav-item"><a href="#">Igredients</a></li>
-                <li class="nav-item"><a href="#">Menu</a></li>
-                <li class="nav-item"><a href="#">Reviews</a></li>
-                <li class="nav-item"><a href="#">Reservations</a></li>
-                <li class="icon"><a href="#"><i class="fab fa-twitter"></i></i></a></li>
-                <li class="icon"><a href="#"><i class="fab fa-youtube"></i></a></li>
-                <li class="icon"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            </ul>
-        </div>
+            <div class="navigation">
+                    <div id="nav-icon1" class="navbar-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <nav class="navbar">
+                        <ul class="main-nav" id="js-menu">
+                            <li class="activeNav">
+                                <a href="#" class="nav-links">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-links">About</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-links">ingredients</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-links">Menu</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-links">Reviews</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-links">Reservation</a>
+                            </li>
+                        </ul>
+                        <ul class="navIcon">
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        </ul>
+                    </nav>
+            </div>
         <div class="contain">   
             <p>the right ingredients for the right food</b>
             <img src="img/icon.png" alt="">
@@ -34,7 +54,31 @@
             </div>
         </div>
     </section>
-    <section id="main"></section>
+    <section id="main">
+        <div class="about">
+            <div class="contentAbout">
+                <h3>Just the right food</h3>
+                <img src="img/icon.png" alt="">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, id exercitationem! Quo ea, recusandae, velit reprehenderit nihil voluptas 
+                    nemo rerum ipsam tenetur animi atque natus obcaecati commodi maiores eos. Illo!</p>
+            </div>
+    </section>
     <section id="footer"></section>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+        $('#nav-icon1').click(function(){
+            $(this).toggleClass('open');
+        });
+    });
+    var mainNav = document.getElementById("js-menu");
+    var navBarToggle = document.getElementById("nav-icon1");
+    navBarToggle.addEventListener("click", function() {
+        mainNav.classList.toggle("active");
+    });
+</script>
 </body>
 </html>
