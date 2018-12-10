@@ -1,163 +1,97 @@
+$font: 'Gentium Book Basic',
+serif;
 
-$font: 'Gentium Book Basic', serif;
-
-body{
+body {
+    width: 100%;
     margin: 0 auto;
     padding: 0;
 }
-#header{
-    margin: 0 auto;
+
+#header {
     background-image: url('../img/header.jpg');
     background-repeat: no-repeat;
-    background-size: contain;
     background-position: center;
-    width: 100%;
-    height: 750px;
-    .navigation{
-        width: 1600px;
-        margin: 0 auto;
-         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+1,000000+9&0.8+0,0+98 */
-        background: -moz-linear-gradient(top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.79) 1%, rgba(0,0,0,0.72) 9%, rgba(0,0,0,0) 98%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.79) 1%,rgba(0,0,0,0.72) 9%,rgba(0,0,0,0) 98%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.79) 1%,rgba(0,0,0,0.72) 9%,rgba(0,0,0,0) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    background-size: cover;
+    margin: 0 auto;
+    max-width: 1600px;
+
+    .navbar {
+        display: flex;
+        color: #fff;
+        padding: 20px 0px 0px 20px;
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.79) 1%, rgba(0, 0, 0, 0.72) 9%, rgba(0, 0, 0, 0) 98%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.79) 1%, rgba(0, 0, 0, 0.72) 9%, rgba(0, 0, 0, 0) 98%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.79) 1%, rgba(0, 0, 0, 0.72) 9%, rgba(0, 0, 0, 0) 98%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#00000000', GradientType=0);
+        /* IE6-9 */
+    }
+
+    .navbar_items {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        font-family: $font;
+        list-style: none;
+        margin: 0;
+        padding-left: 0px;
+
+        .icon {
+            a {
+                color: #dab33e;
+            }
+        }
+
+        .navbar_link,
+        .icon {
+            padding: 20px 20px 0px 20px;
+
+            a {
+                font-family: $font;
+                text-decoration: none;
+            }
+        }
+
+        .navbar_link:hover {
+            border-top: 2px solid #fff;
+        }
     }
-.navIcon{
-    padding-left: 0px;
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-}
-.navIcon li {
-    padding: 10px 20px 10px 20px;
-    cursor: pointer;
-}
-.navIcon li a {
-    color: #dab33e;
-    font-size: 25px;
-}
-.navbar {
-    margin: 0 auto;
-    display: flex;
-}
 
-.main-nav {
-    padding-left: 0px;
-    margin-top: 0px;
-    list-style-type: none;
-    display: none;
-    text-transform: uppercase;
-    li{
-        padding: 30px 20px 10px 20px;
-
+    .navbar_items_right {
+        margin-left: auto;
     }
-}
-.nav-links{
-    text-decoration: none;
-    color: #fff;
-}
-.nav-links:hover{
-    color: #dab33e;
-}
 
-.active {
-    display: block;
-}
-/*Start Hamburger menu animation*/
-#nav-icon1{
-    width: 60px;
-    height: 45px;
-    position: absolute;
-    top: 3%;
-    left: 10%;
-    transform: translate(-3%,-20%);
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-    cursor: pointer;
-}
+    .navbar_link_toggle {
+        display: none;
+    }
 
-#nav-icon1 span{
-    display: block;
-    position: absolute;
-    height: 7px;
-    width: 90%;
-    background: #fff;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
-}
-
-#nav-icon1 span:nth-child(1) {
-    top: 0px;
-}
-
-#nav-icon1 span:nth-child(2) {
-    top: 18px;
-}
-
-#nav-icon1 span:nth-child(3) {
-    top: 36px;
-}
-
-#nav-icon1.open span:nth-child(1) {
-    top: 18px;
-    -webkit-transform: rotate(135deg);
-    -moz-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-    transform: rotate(135deg);
-}
-
-#nav-icon1.open span:nth-child(2) {
-    opacity: 0;
-    left: -60px;
-}
-
-#nav-icon1.open span:nth-child(3) {
-    top: 18px;
-    -webkit-transform: rotate(-135deg);
-    -moz-transform: rotate(-135deg);
-    -o-transform: rotate(-135deg);
-    transform: rotate(-135deg);
-}
-
-/*End Hamburger menu animation*/
-    .contain{
+    .contain {
         text-align: center;
 
-        p{
+        p {
             margin: 0 auto;
             font-size: 80pt;
             color: #fff;
             font-weight: 300;
             width: 52%;
         }
-        .buttons{
-            .blackbtn{
+
+        img {
+            width: 100%;
+        }
+
+        .buttons {
+            padding-bottom: 20px;
+
+            .blackbtn {
                 color: #fff;
                 border: #000;
                 background-color: rgba(0, 0, 0, 0.5);
                 padding: 20px 40px 20px 40px;
                 outline: none;
             }
-            .whitebtn{
+
+            .whitebtn {
                 color: #fff;
                 border: 0px #fff solid;
                 background-color: rgba(255, 255, 255, 0.5);
@@ -166,29 +100,63 @@ body{
             }
         }
     }
+
 }
-#main{
-    width: 1600px;
-    margin: 0 auto;
-    .about{
-        display: flex;
-        flex: row;
-        background-image: url("../img/section2background.jpg");
-        background-repeat: no-repeat;
+
+#main {
+    .aboutsection {
+        background-image: url(../img/section2background.jpg);
+        max-width: 1600px;
+        margin: 0 auto;
     }
 }
 
-@media (min-width: 992px){
-    .main-nav {
-        display: flex !important;
-        flex-direction: row;
+@media (max-width: 992px) {
+    #header {
+        background-size: cover;
+
+        .navbar_items,
+        .navbar {
+            flex-direction: column;
+        }
+
+        .navbar_items {
+            display: none;
+        }
+
+        .navbar_items_right {
+            margin-left: 0;
+        }
+
+        .navbar_toggleShow {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar_link_toggle {
+            align-self: flex-end;
+            display: initial;
+            position: absolute;
+            cursor: pointer;
+            top: 4%;
+            right: 6%;
+        }
     }
-    .navbar-toggle{
-        display: none;
+
+    .contain {
+        p {
+            font-size: 40pt;
+        }
     }
 }
-@media (max-width: 992px){
-    body{
-        width: 95%;
+
+
+@media (max-width: 576px) {
+    #header {
+        .contain {
+            p {
+                font-size: 30pt;
+            }
+        }
     }
 }
