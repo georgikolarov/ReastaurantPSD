@@ -184,28 +184,89 @@ body {
         }
     }
     .menu{
-        .tzatsiki {
+        padding: 80px 0px 80px 0px;
+        background-image: url(../img/section2background.jpg);
+        background-size: cover;
+        background-position: center;
+        max-width: 1600px;
+        margin: 0 auto;
+        padding-bottom: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        img{
+            padding-bottom: 20px;
+        }
+        .appetisers, .starters, .salads, .mainDashes{
+            text-align: center !important;
+            padding: 0px 30px 0px 30px;
+            h1{
+                font-size: 36pt;
+                color: #cc9900;
+            }
+        }
+        .mainDashes{
+            margin-top: -103px !important;
+        }
+        .contentMenu {
             list-style-type: none;
-            width: 50%;
-            margin: auto;
-            padding: 0;
+            margin: 0 auto;
+            padding-left: 0px;
+            .contentList{
+                position: relative;
+                padding-bottom: 30px;
+            }
+            .greeksalad, .roastlamb{
+                outline: 1px solid #cc9900;
+                p{
+                    margin: 0px;
+                    padding: 10px;
+                }
+                .list{
+                    padding: 10px;
+                }
+                .list:after{
+                    position: absolute;
+                    bottom: 0%;
+                    width: 95%;
+                    border-bottom: solid 1px #cc9900;
+                }
+            }
+            .greeksalad:before, .roastlamb:before{
+                content:url('../img/restaurant_08.png');                
+                position: absolute;
+                width: 50px;    
+                top: -17%;
+                right: 18px;
+                height: 20px;
+                background-color: #c89f2d;
+            }
+            ul{
+                padding-left: 0px;
+                list-style: none;
+            }
+            p{
+                margin: 10px 0px 0px 0px;
+                text-align: left;
+                font-size: 16pt;
+            }
           }
           
           .list {
+            position: relative;
             display: flex;
+            justify-content: space-between;
             flex-direction: row;
+            color: #cc9900;
+            padding-bottom: 10px;
+            font-size: 20pt;
           }
           .list:after {
             content: '';
+            position: absolute;
+            bottom: 0%;
+            width: 100%;
             border-bottom: solid 1px #cc9900;
-            flex:2;
-          
-          }
-          
-          .title {
-            margin-right: 0.5em;
-            flex: 1;
-            display: flex;
           }
           
           
@@ -213,7 +274,6 @@ body {
           
 }
 }
-
 @media (max-width: 992px) {
     #header {
         
@@ -268,6 +328,9 @@ body {
     }
     #main{
         .about{
+            flex-direction: column;
+        }
+        menu{
             flex-direction: column;
         }
     }

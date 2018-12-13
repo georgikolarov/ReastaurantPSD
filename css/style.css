@@ -226,39 +226,117 @@ body {
   padding-bottom: 30px;
 }
 
-#main .menu .tzatsiki {
-  list-style-type: none;
-  width: 50%;
-  margin: auto;
-  padding: 0;
-}
-
-#main .menu .list {
+#main .menu {
+  padding: 80px 0px 80px 0px;
+  background-image: url(../img/section2background.jpg);
+  background-size: cover;
+  background-position: center;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#main .menu img {
+  padding-bottom: 20px;
+}
+
+#main .menu .appetisers, #main .menu .starters, #main .menu .salads, #main .menu .mainDashes {
+  text-align: center !important;
+  padding: 0px 30px 0px 30px;
+}
+
+#main .menu .appetisers h1, #main .menu .starters h1, #main .menu .salads h1, #main .menu .mainDashes h1 {
+  font-size: 36pt;
+  color: #cc9900;
+}
+
+#main .menu .mainDashes {
+  margin-top: -103px !important;
+}
+
+#main .menu .contentMenu {
+  list-style-type: none;
+  margin: 0 auto;
+  padding-left: 0px;
+}
+
+#main .menu .contentMenu .contentList {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+#main .menu .contentMenu .greeksalad, #main .menu .contentMenu .roastlamb {
+  outline: 1px solid #cc9900;
+}
+
+#main .menu .contentMenu .greeksalad p, #main .menu .contentMenu .roastlamb p {
+  margin: 0px;
+  padding: 10px;
+}
+
+#main .menu .contentMenu .greeksalad .list, #main .menu .contentMenu .roastlamb .list {
+  padding: 10px;
+}
+
+#main .menu .contentMenu .greeksalad .list:after, #main .menu .contentMenu .roastlamb .list:after {
+  position: absolute;
+  bottom: 0%;
+  width: 95%;
+  border-bottom: solid 1px #cc9900;
+}
+
+#main .menu .contentMenu .greeksalad:before, #main .menu .contentMenu .roastlamb:before {
+  content: url("../img/restaurant_08.png");
+  position: absolute;
+  width: 50px;
+  top: -17%;
+  right: 18px;
+  height: 20px;
+  background-color: #c89f2d;
+}
+
+#main .menu .contentMenu ul {
+  padding-left: 0px;
+  list-style: none;
+}
+
+#main .menu .contentMenu p {
+  margin: 10px 0px 0px 0px;
+  text-align: left;
+  font-size: 16pt;
+}
+
+#main .menu .list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  color: #cc9900;
+  padding-bottom: 10px;
+  font-size: 20pt;
 }
 
 #main .menu .list:after {
   content: '';
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
   border-bottom: solid 1px #cc9900;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-}
-
-#main .menu .title {
-  margin-right: 0.5em;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 @media (max-width: 992px) {
@@ -317,6 +395,12 @@ body {
     font-size: 35pt;
   }
   #main .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #main menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
