@@ -121,7 +121,7 @@ body {
 
 #main .about {
   padding-top: 20px;
-  background-image: url(../img/section2background.jpg);
+  background-image: url(../img/backgroundtexture.jpg);
   background-size: cover;
   max-width: 1600px;
   margin: 0 auto;
@@ -150,7 +150,7 @@ body {
 }
 
 #main .about .content h2 {
-  font-size: 30px;
+  font-size: 45px;
   color: #dab33e;
 }
 
@@ -160,6 +160,7 @@ body {
 
 #main .about .content p {
   width: 70%;
+  font-size: 20px;
 }
 
 #main .about img {
@@ -173,9 +174,9 @@ body {
           align-items: center;
 }
 
-#main .ingredients {
+#main .ingredients, #main .reviews {
   padding: 80px 0px 80px 0px;
-  background-image: url(../img/section3background.jpg);
+  background-image: url(../img/background1.jpg);
   background-size: cover;
   background-position: center;
   max-width: 1600px;
@@ -188,7 +189,7 @@ body {
           align-items: center;
 }
 
-#main .ingredients .boxIngredients {
+#main .ingredients .boxIngredients, #main .ingredients .boxReviews, #main .reviews .boxIngredients, #main .reviews .boxReviews {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.45+0,0.45+100 */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
@@ -212,13 +213,13 @@ body {
           align-items: center;
 }
 
-#main .ingredients .boxIngredients h1 {
+#main .ingredients .boxIngredients h1, #main .ingredients .boxReviews h1, #main .reviews .boxIngredients h1, #main .reviews .boxReviews h1 {
   padding-top: 30px;
   font-size: 30px;
   color: #fff;
 }
 
-#main .ingredients .boxIngredients p {
+#main .ingredients .boxIngredients p, #main .ingredients .boxReviews p, #main .reviews .boxIngredients p, #main .reviews .boxReviews p {
   width: 80%;
   text-align: center;
   color: #fff;
@@ -226,9 +227,18 @@ body {
   padding-bottom: 30px;
 }
 
+#main .ingredients .boxReviews p, #main .reviews .boxReviews p {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+#main .reviews {
+  background-image: url(../img/background2.jpg);
+}
+
 #main .menu {
   padding: 80px 0px 80px 0px;
-  background-image: url(../img/section2background.jpg);
+  background-image: url(../img/backgroundwhite2.jpg);
   background-size: cover;
   background-position: center;
   max-width: 1600px;
@@ -256,10 +266,6 @@ body {
 #main .menu .appetisers h1, #main .menu .starters h1, #main .menu .salads h1, #main .menu .mainDashes h1 {
   font-size: 36pt;
   color: #cc9900;
-}
-
-#main .menu .mainDashes {
-  margin-top: -103px !important;
 }
 
 #main .menu .contentMenu {
@@ -293,11 +299,11 @@ body {
   border-bottom: solid 1px #cc9900;
 }
 
-#main .menu .contentMenu .greeksalad:before, #main .menu .contentMenu .roastlamb:before {
+#main .menu .contentMenu .special:after {
   content: url("../img/restaurant_08.png");
   position: absolute;
   width: 50px;
-  top: -17%;
+  bottom: 0;
   right: 18px;
   height: 20px;
   background-color: #c89f2d;
@@ -339,6 +345,76 @@ body {
   border-bottom: solid 1px #cc9900;
 }
 
+#main .reservation {
+  background-image: url(../img/backgroundtexture.jpg);
+  background-size: cover;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+}
+
+#main .reservation .images {
+  padding: 60px 10px 60px 10px;
+}
+
+#main .reservation .images img {
+  max-width: 100%;
+}
+
+#main .reservation .content {
+  padding: 60px 10px 60px 10px;
+}
+
+#main .reservation .content p {
+  max-width: 700px;
+}
+
+#footer {
+  background-color: #191919;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: #fff;
+  text-align: center;
+}
+
+#footer .aboutUs {
+  max-width: 300px;
+}
+
+#footer .location .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  text-align: center;
+  padding-left: 0px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media (min-width: 1089px) {
+  .mainDashes {
+    margin-top: -103px !important;
+  }
+}
+
 @media (max-width: 992px) {
   #header {
     background-size: cover;
@@ -354,7 +430,7 @@ body {
     display: none;
   }
   #header .navbar_items .navbar_link {
-    padding: 45px 20px 0px 20px;
+    padding: 20px 20px 0px 20px;
   }
   #header .navbar_items .navbar_link a {
     text-decoration: none;
@@ -400,11 +476,26 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #main menu {
+  #main .menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  #main .reservation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
